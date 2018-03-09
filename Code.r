@@ -19,110 +19,147 @@ summary(IDL$Contact.Mailing.State)
 
 #Upcase variable
 #Strip out characters in variable
+#Clean state names
 
-#Clean up the state names.Start with Texas
-levels(IDL$Contact.Mailing.State) <- sub("tx", "TX", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Texas", "TX", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("TX 77328", "TX", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("tx.", "TX", levels(IDL$Contact.Mailing.State),ignore.case = T)
+#Alabama
+levels(military$Contact.Mailing.State) <- sub("alaama", "AL", levels(military$Contact.Mailing.State),ignore.case = T)
 
-#Now North Carolina
-levels(IDL$Contact.Mailing.State) <- sub("nc", "NC", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("North Carolina", "NC", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("-NC", "NC", levels(IDL$Contact.Mailing.State))
-levels(IDL$Contact.Mailing.State) <- sub("N.c", "NC", levels(IDL$Contact.Mailing.State))
-levels(IDL$Contact.Mailing.State) <- sub("n.c.", "NC", levels(IDL$Contact.Mailing.State))
+#Arizona
+levels(military$Contact.Mailing.State) <- sub("az", "AZ", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Arizona", "AZ", levels(military$Contact.Mailing.State), ignore.case = T)
 
-
-#Now Maryland
-levels(IDL$Contact.Mailing.State) <- sub("Md", "MD", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Maryland", "MD", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Md.", "MD", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Now DC
-levels(IDL$Contact.Mailing.State) <- sub("Dc", "DC", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("D.C", "DC", levels(IDL$Contact.Mailing.State))
-levels(IDL$Contact.Mailing.State) <- sub("D.C.", "DC", levels(IDL$Contact.Mailing.State))
-levels(IDL$Contact.Mailing.State) <- sub("DC.", "DC", levels(IDL$Contact.Mailing.State))
-
-#Now Ohio
-levels(IDL$Contact.Mailing.State) <- sub("Ohio", "OH", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Oh", "OH", levels(IDL$Contact.Mailing.State),ignore.case = T)
-
-
-#Indiana
-levels(IDL$Contact.Mailing.State) <- sub("In", "IN", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Indiana", "IN", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Indianapolis", "IN", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("INdpolis", "IN", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("INpolis", "IN", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Now Florida
-levels(IDL$Contact.Mailing.State) <- sub("fl", "FL", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Florida", "FL", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Georgia
-levels(IDL$Contact.Mailing.State) <- sub("Ga", "GA", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("Georgia", "GA", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Kansas
-levels(IDL$Contact.Mailing.State) <- sub("Kansas", "KS", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("ks", "KS", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Louisiana
-levels(IDL$Contact.Mailing.State) <- sub("La", "LA", levels(IDL$Contact.Mailing.State), ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("La.", "LA", levels(IDL$Contact.Mailing.State), ignore.case = T)
-
-#Mass
-levels(IDL$Contact.Mailing.State) <- sub("ma", "MA", levels(IDL$Contact.Mailing.State), ignore.case = T)
+#California
+levels(military$Contact.Mailing.State) <- sub("California", "CA", levels(military$Contact.Mailing.State),ignore.case = T)
 
 #Colorado
-levels(IDL$Contact.Mailing.State) <- sub("Colorado", "CO", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Colorado", "CO", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Co", "CO", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#DC
+levels(military$Contact.Mailing.State) <- sub("Dc", "DC", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("D.C", "DC", levels(military$Contact.Mailing.State))
+levels(military$Contact.Mailing.State) <- sub("D.C.", "DC", levels(military$Contact.Mailing.State))
+levels(military$Contact.Mailing.State) <- sub("DC.", "DC", levels(military$Contact.Mailing.State))
+
+#Florida
+levels(military$Contact.Mailing.State) <- sub("fl", "FL", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Florida", "FL", levels(military$Contact.Mailing.State), ignore.case = T)
+
+#Georgia
+levels(military$Contact.Mailing.State) <- sub("Ga", "GA", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Georgia", "GA", levels(military$Contact.Mailing.State), ignore.case = T)
+
+#Idaho
+levels(military$Contact.Mailing.State) <- sub("Idaho", "ID", levels(military$Contact.Mailing.State), ignore.case = T)
+
+#Indiana
+levels(military$Contact.Mailing.State) <- sub("In", "IN", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Indiana", "IN", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Indianapolis", "IN", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("INdpolis", "IN", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("INpolis", "IN", levels(military$Contact.Mailing.State), ignore.case = T)
+
 #Iowa
-levels(IDL$Contact.Mailing.State) <- sub("Iowa", "IA", levels(IDL$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Iowa", "IA", levels(military$Contact.Mailing.State), ignore.case = T)
+
 #Kentucky
-levels(IDL$Contact.Mailing.State) <- sub("Ky", "KY", levels(IDL$Contact.Mailing.State),ignore.case = T)
-#Alabama
-levels(IDL$Contact.Mailing.State) <- sub("alaama", "AL", levels(IDL$Contact.Mailing.State),ignore.case = T)
-#California
-levels(IDL$Contact.Mailing.State) <- sub("California", "CA", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Ky", "KY", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#Kansas
+levels(military$Contact.Mailing.State) <- sub("Kansas", "KS", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("ks", "KS", levels(military$Contact.Mailing.State), ignore.case = T)
+
+#Louisiana
+levels(military$Contact.Mailing.State) <- sub("La", "LA", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("La.", "LA", levels(military$Contact.Mailing.State), ignore.case = T)
+
+#Maryland
+levels(military$Contact.Mailing.State) <- sub("Md", "MD", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Maryland", "MD", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Md.", "MD", levels(military$Contact.Mailing.State), ignore.case = T)
+
+
+#Mass
+levels(military$Contact.Mailing.State) <- sub("ma", "MA", levels(military$Contact.Mailing.State), ignore.case = T)
+
 #Michigan
-levels(IDL$Contact.Mailing.State) <- sub("mi", "MI", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("michigan", "MI", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("mi", "MI", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("michigan", "MI", levels(military$Contact.Mailing.State),ignore.case = T)
+
+
 #Mississippi
-levels(IDL$Contact.Mailing.State) <- sub("mississippi", "MS", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("mississippi", "MS", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Nebraska
-levels(IDL$Contact.Mailing.State) <- sub("ne", "NE", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("ne", "NE", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Nevada
-levels(IDL$Contact.Mailing.State) <- sub("Nevada", "NV", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Nevada", "NV", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#New Jersey
+levels(military$Contact.Mailing.State) <- sub("New Jersey", "NJ", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("nj", "NJ", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #New Mexico
-levels(IDL$Contact.Mailing.State) <- sub("New Mexico", "NM", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("New Mexico", "NM", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #New York
-levels(IDL$Contact.Mailing.State) <- sub("New York", "NY", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("New Yotk", "NY", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("ny", "NY", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("nyc", "NY", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("New York", "NY", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("New Yotk", "NY", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("ny", "NY", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("nyc", "NY", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#North Carolina
+levels(military$Contact.Mailing.State) <- sub("nc", "NC", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("North Carolina", "NC", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("-NC", "NC", levels(military$Contact.Mailing.State))
+levels(military$Contact.Mailing.State) <- sub("N.c", "NC", levels(military$Contact.Mailing.State))
+levels(military$Contact.Mailing.State) <- sub("n.c.", "NC", levels(military$Contact.Mailing.State))
+
 #North Dakota
-levels(IDL$Contact.Mailing.State) <- sub("north dakota", "ND", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("north dakota", "ND", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#Ohio
+levels(military$Contact.Mailing.State) <- sub("Ohio", "OH", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Oh", "OH", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Oklahoma
-levels(IDL$Contact.Mailing.State) <- sub("oklaoma", "OK", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("oklaoma", "OK", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Pennsylvania
-levels(IDL$Contact.Mailing.State) <- sub("pa", "PA", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("pa", "PA", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #South Carolina
-levels(IDL$Contact.Mailing.State) <- sub("sc", "SC", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("south carolina", "SC", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("sc", "SC", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("south carolina", "SC", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #South Dakota
-levels(IDL$Contact.Mailing.State) <- sub("South Dakota", "SD", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("South Dakota", "SD", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#Texas
+levels(military$Contact.Mailing.State) <- sub("tx", "TX", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Texas", "TX", levels(military$Contact.Mailing.State), ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("TX 77328", "TX", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("tx.", "TX", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Utah
-levels(IDL$Contact.Mailing.State) <- sub("ut", "UT", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("ut", "UT", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Virginia
-levels(IDL$Contact.Mailing.State) <- sub("va", "VA", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("virginia", "VA", levels(IDL$Contact.Mailing.State),ignore.case = T)
-levels(IDL$Contact.Mailing.State) <- sub("virgina", "VA", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("va", "VA", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("virginia", "VA", levels(military$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("virgina", "VA", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #Washington
-levels(IDL$Contact.Mailing.State) <- sub("Washington", "WA", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("Washington", "WA", levels(military$Contact.Mailing.State),ignore.case = T)
+
 #West Virginia
-levels(IDL$Contact.Mailing.State) <- sub("wv", "WV", levels(IDL$Contact.Mailing.State),ignore.case = T)
+levels(military$Contact.Mailing.State) <- sub("wv", "WV", levels(military$Contact.Mailing.State),ignore.case = T)
+
+#Wisconsin
+levels(military$Contact.Mailing.State) <- sub("Wisconsin", "WI", levels(military$Contact.Mailing.State),ignore.case = T)
+
+summary(military$Contact.Mailing.State)
 
 #What do we need to clean?
 summary(IDL$Contact.Mailing.State)
